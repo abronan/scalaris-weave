@@ -18,9 +18,9 @@ LISTEN_ADDRESS_COMMA=`echo $LISTEN_ADDRESS | tr '.' ','`
 # Fill in the minimal configuration for Scalaris
 #
 echo "
-{listen_ip , {$LISTEN_ADDRESS_COMMA}}.
-{mgmt_server, {{$JOIN_IP_COMMA},14195,mgmt_server}}.
-{known_hosts, [{{$JOIN_IP_COMMA},14195, service_per_vm}
+{listen_ip, {$LISTEN_ADDRESS_COMMA}}.
+{mgmt_server, {{$JOIN_IP_COMMA}, 14195, mgmt_server}}.
+{known_hosts, [{{$JOIN_IP_COMMA}, 14195, service_per_vm}
 ]}.
 " >> /etc/scalaris/scalaris.local.cfg
 

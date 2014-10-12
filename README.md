@@ -1,6 +1,6 @@
 ##Dockerizing Scalaris with containers scattered over the network
 
-Using [Weave](https://github.com/zettio/weave) with Docker to run a [Scalaris](https://code.google.com/p/scalaris/) cluster running on containers scattered across different Hosts.
+Experimentation using [Weave](https://github.com/zettio/weave) in order to set up a [Scalaris](https://code.google.com/p/scalaris/) cluster with containers scattered across different Hosts.
 
 ###Setup
 
@@ -23,17 +23,17 @@ If you want your node to be the initiator of the cluster just give the same IP f
 ####Host 0 (Initiator)
 
 	sudo weave launch 10.2.0.1/16 192.168.42.101 192.168.42.102
-	sudo weave run 10.2.1.3/24 -d --name first -p 8000:8000 -e JOIN_IP=10.2.1.3 -e LISTEN_ADDRESS=10.2.1.3  abronan/scalaris
+	sudo weave run 10.2.1.3/24 -d --name first -p 8000:8000 -e JOIN_IP=10.2.1.3 -e LISTEN_ADDRESS=10.2.1.3 abronan/scalaris-weave
 
 ####Host 1
 
 	sudo weave launch 10.2.0.1/16 192.168.42.100 192.168.42.102
-	sudo weave run 10.2.1.4/24 -d --name second -p 8000:8000 -e JOIN_IP=10.2.1.3 -e LISTEN_ADDRESS=10.2.1.4  abronan/scalaris
+	sudo weave run 10.2.1.4/24 -d --name second -p 8000:8000 -e JOIN_IP=10.2.1.3 -e LISTEN_ADDRESS=10.2.1.4 abronan/scalaris-weave
 
 ####Host 2
 
 	sudo weave launch 10.2.0.1/16 192.168.42.100 192.168.42.101
-	sudo weave run 10.2.1.5/24 -d --name third -p 8000:8000 -e JOIN_IP=10.2.1.3 -e LISTEN_ADDRESS=10.2.1.5  abronan/scalaris
+	sudo weave run 10.2.1.5/24 -d --name third -p 8000:8000 -e JOIN_IP=10.2.1.3 -e LISTEN_ADDRESS=10.2.1.5 abronan/scalaris-weave
 	
 ###Testing the cluster
 
