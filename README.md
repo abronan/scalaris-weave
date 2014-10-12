@@ -37,7 +37,7 @@ If you want your node to be the initiator of the cluster just give the same IP f
 	
 ###Testing the cluster
 
-You can now access the Scalaris web interface through each Hosts (the 8000 port is mapped from the container):
+You can now access the Scalaris web interface through each Hosts (the port 8000 is mapped from the container):
 
 [http://192.168.42.100:8000](http://192.168.42.100:8000)
 
@@ -45,4 +45,4 @@ You can now access the Scalaris web interface through each Hosts (the 8000 port 
 
 [http://192.168.42.102:8000](http://192.168.42.102:8000)
 
-Store a simple Key/Value pair, then search for it. It just works!
+Store a simple Key/Value pair, then search for it. It works!
