@@ -6,7 +6,7 @@ FROM ubuntu:trusty
 MAINTAINER Alexandre Beslic
 
 # Install and setup project dependencies
-RUN apt-get update && apt-get install -y erlang wget curl lsb-release supervisor openssh-server
+RUN apt-get update && apt-get install -y erlang wget curl conntrack lsb-release supervisor openssh-server
 
 RUN mkdir -p /var/run/sshd
 RUN mkdir -p /var/log/supervisor
