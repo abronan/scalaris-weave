@@ -9,5 +9,5 @@ sudo apt-get install -y lxc-docker
 
 echo Installing Weave..
 sudo wget -O /usr/local/bin/weave \
-  https://raw.githubusercontent.com/zettio/weave/master/weave
+  https://github.com/zettio/weave/releases/download/latest_release/weave
 sudo chmod a+x /usr/local/bin/weave
